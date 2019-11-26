@@ -1,0 +1,58 @@
+{
+  "extends": "tslint:recommended",
+  "linterOptions": {
+    "exclude": ["app/model/*.{j,t}s"]
+  },
+  "rules": {
+    "curly": false,
+    "arrow-parens": false,
+    "ordered-imports": false,
+    "no-string-literal": false,
+    "trailing-comma": false,
+    "whitespace": false,
+    "one-line": false,
+    "typedef-whitespace": false,
+    "max-line-length": false,
+    "semicolon": false,
+    "object-literal-shorthand": false,
+    "triple-equals": false,
+    "no-shadowed-variable": false,
+    "no-console": false,
+    "no-trailing-whitespace": false,
+    "member-ordering": false,
+    "comment-format": false,
+    "no-consecutive-blank-lines": false,
+    "object-literal-sort-keys": false,
+    "object-literal-key-quotes": false,
+    "one-variable-per-declaration": false,
+    "variable-name": false,
+    "jsdoc-format": false,
+    "prefer-const": false,
+    "only-arrow-functions": false,
+    "no-var-requires": false,
+    "no-var-keyword": false,
+    "no-bitwise": false,
+    "radix": false,
+    "no-empty": false,
+    "eofline": false,
+    "quotemark": [
+      false,
+      "single",
+      "jsx-double"
+    ],
+    "space-before-function-paren": false,
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "adjacent-overload-signatures": true,
+    "member-access": [
+      false
+    ],
+    "max-classes-per-file": [
+      true,
+      10
+    ],
+    "align": false
+  }
+}

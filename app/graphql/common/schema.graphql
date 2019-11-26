@@ -1,0 +1,11 @@
+scalar Date
+#标量
+scalar json
+
+# 删除后响应信息
+type DelRes {
+  # 0删除失败,200成功
+  rescode: String
+  # 失败原因
+  resmessage: String
+}

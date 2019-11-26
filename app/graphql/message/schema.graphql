@@ -1,0 +1,45 @@
+type Message {
+  # 主键
+  id: String
+  # 流程名称
+  title: String
+  # 流程节点
+  content: String
+
+  # 创建人
+  creator: String
+  # 创建时间
+  createdAt: Date
+  # 修改人
+  modifier: String
+  # 修改时间
+  updatedAt: Date
+}
+
+type MessageRes {
+  rescode: Int
+  resmessage: String
+  data: Message
+}
+
+type MessageListRes {
+  rescode: Int
+  resmessage: String
+  data: [Message]
+}
+
+input MessageForAdd {
+  # 流程名称
+  title: String!
+  # 流程节点
+  content: String!
+}
+
+input MessageForUpd {
+  # 主键
+  id: String!
+  # 流程名称
+  title: String!
+  # 流程节点
+  content: String!
+}

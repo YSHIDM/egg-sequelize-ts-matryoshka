@@ -1,0 +1,72 @@
+{
+  "name": "egg-sequelize-ts-matryoshka",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "typescript": true,
+    "declarations": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-sequelize-ts-matryoshka",
+    "stop": "egg-scripts stop --title=egg-sequelize-ts-matryoshka",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test-local": "EGG_SERVER_ENV=local egg-bin test",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov",
+    "tsc": "ets && tsc -p tsconfig.json",
+    "ci": "npm run lint && npm run cov && npm run tsc",
+    "autod": "autod",
+    "lint": "tslint --project . -c tslint.json",
+    "clean": "ets clean"
+  },
+  "dependencies": {
+    "dataloader": "^1.4.0",
+    "egg": "^2.25.0",
+    "egg-graphql": "^2.6.0",
+    "egg-oss": "^2.0.0",
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.11.1",
+    "egg-sequelize": "^5.2.0",
+    "egg-sequelize-ts": "^0.2.3-0",
+    "egg-view-ejs": "^2.0.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "gm": "^1.23.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.7.0",
+    "pg": "^7.12.1",
+    "reflect-metadata": "^0.1.13",
+    "sequelize-typescript": "^1.0.0",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^12.0.0",
+    "@types/supertest": "^2.0.0",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.14.0",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.24.1",
+    "tslib": "^1.9.0",
+    "tslint": "^5.20.0",
+    "tslint-config-egg": "^1.0.0",
+    "typescript": "^3.7.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "eslintIgnore": [
+    "coverage"
+  ],
+  "author": "qicho",
+  "license": "MIT"
+}
