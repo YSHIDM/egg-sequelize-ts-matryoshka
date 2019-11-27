@@ -9,15 +9,14 @@ export default class LogsSvc extends Service {
             where: {
                 id
             }
-        }).then(d => d?.toJSON())
+        }).then(d => d?.toJSON());
         return logs;
     }
     public async addLogs(obj) {
         const { ctx, app } = this;
         const model = ctx.model.Logs;
         obj['id'] = app['genId']('IMG')
-        const logs = await model.create(obj)
-            .then(d => d?.toJSON())
+        const logs = await model.create(obj).then(d => d?.toJSON());
         return logs;
     }
     public async updateLogs(obj) {
@@ -27,7 +26,7 @@ export default class LogsSvc extends Service {
                 id: obj.id
             }
         });
-        return model.findByPk(obj.id);
+        return model.findByPk(obj.id).then(d=>d?.toJSON());
     }
     public async deleteLogs(id) {
         const model = this.ctx.model.Logs;
