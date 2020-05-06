@@ -18,10 +18,10 @@ const plugin: EggPlugin = {
         enable: true,
         package: 'egg-sequelize-ts'
     },
-    redis: {
-        enable: true,
-        package: 'egg-redis',
-    },
+    // redis: {
+    //     enable: true,
+    //     package: 'egg-redis',
+    // },
     graphql: {
         enable: true,
         package: 'egg-graphql',

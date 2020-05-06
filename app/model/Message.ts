@@ -25,4 +25,4 @@ export class Message extends BaseTable {
   
 };
 
-export default () => Message;
+export default Message;

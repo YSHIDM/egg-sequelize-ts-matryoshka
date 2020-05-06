@@ -4,7 +4,7 @@ export default () => {
     const config: PowerPartial<EggAppConfig> = {};
     config.sequelize = {
         dialect: 'postgres',
-        host: '127.0.0.1',
+        host: '115.28.138.4',
         port: 5433,
         username: 'postgres',
         password: 'postgres',
@@ -14,13 +14,13 @@ export default () => {
             underscored: false,
         },
     };
-    config.redis = {
-        client: {
-            port: 6378,          // Redis port
-            host: '127.0.0.1',   // Redis host
-            password: '123456',
-            db: 0,
-        },
-    };
+    // config.redis = {
+    //     client: {
+    //         port: 6378,          // Redis port
+    //         host: '115.28.138.4',   // Redis host
+    //         password: '123456',
+    //         db: 0,
+    //     },
+    // };
     return config;
 };

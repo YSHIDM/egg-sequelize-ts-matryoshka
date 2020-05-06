@@ -3,7 +3,7 @@ type Mutation {
   updateMessage(obj: MessageForUpd): MessageRes
   deleteMessage(id: String): DelRes
 
-  addLogs(obj: LogsForAdd): LogsRes
-  updateLogs(obj: LogsForUpd): LogsRes
-  deleteLogs(id: String): DelRes
+  # addLogs(obj: LogsForAdd): LogsRes
+  # updateLogs(obj: LogsForUpd): LogsRes
+  # deleteLogs(id: String): DelRes
 }

@@ -24,10 +24,10 @@ export class BaseTable extends Model<BaseTable> {
     field: 'created_at'
   })
   get createdAt(): string {
-    return moment(this.getDataValue('createdAt')).format('YYYY-MM-DD HH:mm:ss');
+    return moment(this.createdAt).format('YYYY-MM-DD HH:mm:ss');
   };
   set createdAt(value: string) {
-    this.setDataValue('createdAt', value);
+    this.createdAt = value;
   };
 
   // modifier: string;
@@ -39,10 +39,10 @@ export class BaseTable extends Model<BaseTable> {
     field: 'updated_at'
   })
   get updatedAt(): Date {
-    return moment(this.getDataValue('updatedAt')).format('YYYY-MM-DD HH:mm:ss');
+    return moment(this.updatedAt).format('YYYY-MM-DD HH:mm:ss');
   };
   set updatedAt(value: Date) {
-    this.setDataValue('updatedAt', value);
+    this.updatedAt = value;
   };
 
 };

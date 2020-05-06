@@ -12,4 +12,4 @@ class Logs extends Message {
   })
   like: number;
 };
-export default () => Logs;
+export default Logs;

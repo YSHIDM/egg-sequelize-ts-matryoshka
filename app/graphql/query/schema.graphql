@@ -1,4 +1,4 @@
 type Query {
-  getLogs(id:String):LogsRes
+  # getLogs(id:String):LogsRes
   getMessage(id:String):MessageRes
 }
