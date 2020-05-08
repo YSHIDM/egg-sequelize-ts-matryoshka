@@ -16,8 +16,8 @@ class MessageConnector {
      * @param {*} id 信息id
      */
     async getMessage(id) {
-        
-        return this.ctx.helper.getInfo(200, null, await this.service.getMessage(id));
+        return this.ctx.helper.getInfo(200,null,{id,title:'1234'})
+        // return this.ctx.helper.getInfo(200, null, await this.service.getMessage(id));
     }
     /**
      * 修改信息

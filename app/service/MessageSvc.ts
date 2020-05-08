@@ -29,6 +29,7 @@ export default class MessageSvc extends Service {
         return model.findByPk(obj.id);
     }
     public async deleteMessage(id) {
+        
         const model = this.ctx.model.Message;
         return model.destroy({
             where: {

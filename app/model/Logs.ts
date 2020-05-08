@@ -1,5 +1,5 @@
-import { Column, Table, } from 'sequelize-typescript';
-import {Message} from './Message'
+import { Column, Table } from 'sequelize-typescript';
+import { Message } from './Message'
 // const moment = require('moment');
 
 @Table({
@@ -10,6 +10,10 @@ class Logs extends Message {
   @Column({
     comment: '点赞数',
   })
-  like: number;
+  favorite: number;
+  @Column({
+    comment: '点赞数',
+  })
+  desc: string;
 };
 export default Logs;

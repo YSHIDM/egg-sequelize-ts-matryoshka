@@ -16,13 +16,6 @@ export class Message extends BaseTable {
     comment: '信息内容'
   })
   content: string;
-
-  @Column({
-    comment: '创建人'
-  })
-  creator: string;
-
-  
 };
 
 export default Message;

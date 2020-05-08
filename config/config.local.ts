@@ -13,14 +13,15 @@ export default () => {
         define: {
             underscored: false,
         },
+        operatorsAliases: false
     };
-    // config.redis = {
-    //     client: {
-    //         port: 6378,          // Redis port
-    //         host: '115.28.138.4',   // Redis host
-    //         password: '123456',
-    //         db: 0,
-    //     },
-    // };
+    config.redis = {
+        client: {
+            port: 6378,          // Redis port
+            host: '115.28.138.4',   // Redis host
+            password: '123456',
+            db: 0,
+        },
+    };
     return config;
 };
