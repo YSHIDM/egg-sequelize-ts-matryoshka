@@ -31,3 +31,7 @@ $ npm start
 
 - Node.js 12.x
 - Typescript 3.7+
+
+## 相关教程
+
+[使用ts版的eggjs来搭建api](https://blog.tcs-y.com/2018/09/28/eggjs-ts-project/)
