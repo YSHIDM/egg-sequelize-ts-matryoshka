@@ -1,11 +1,11 @@
-import { Column, DataType, Table } from 'sequelize-typescript'
+import { Column, DataType, Model, Table } from 'sequelize-typescript'
 const { STRING } = DataType
-import { BaseTable } from './BaseTable'
+// import { BaseTable } from './BaseTable'
 
 @Table({
   modelName: 'message',
 })
-class Message extends BaseTable {
+export class Message extends Model {
 
   @Column({
     type: STRING(50),
@@ -20,8 +20,4 @@ class Message extends BaseTable {
   content: string;
 }
 
-const MessageModel = () => Message
-export {
-  Message,
-  MessageModel
-}
+export default Message

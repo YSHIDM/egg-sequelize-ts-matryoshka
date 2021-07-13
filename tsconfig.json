@@ -1,7 +1,7 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "target": "es2017",
+    "target": "es2018",
     "module": "commonjs",
     "strict": true,
     "noImplicitAny": false,
@@ -20,12 +20,16 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "inlineSourceMap": true,
-    "importHelpers": true
+    "importHelpers": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "removeComments": true,
   },
   "exclude": [
     "app/public",
     "app/views",
-    "app/model",
-    "node_modules*"
+    "node_modules*",
+    "app/graphql*",
+    "app/queue*",
+    "vendor/*",
   ]
 }

@@ -18,46 +18,52 @@
     "tsc": "ets && tsc -p tsconfig.json",
     "ci": "npm run lint && npm run cov && npm run tsc",
     "autod": "autod",
-    "lint": "tslint --project . -c tslint.json",
+    "lint": "eslint . --fix --ext .ts",
     "clean": "ets clean"
   },
   "dependencies": {
-    "dataloader": "^1.4.0",
-    "egg": "^2.26.0",
-    "egg-graphql": "^2.7.1",
+    "dataloader": "^2.0.0",
+    "egg": "^2.29.4",
+    "egg-graphql": "^2.8.0",
     "egg-oss": "^2.0.0",
     "egg-redis": "^2.4.0",
-    "egg-scripts": "^2.11.1",
-    "egg-sequelize": "^5.2.0",
-    "egg-sequelize-ts": "^0.2.3-0",
+    "egg-scripts": "^2.14.0",
+    "egg-sequelize": "^6.0.0",
+    "egg-sequelize-ts-upgrade": "^1.0.2",
     "egg-view-ejs": "^2.0.1",
-    "egg-view-nunjucks": "^2.2.0",
+    "egg-view-nunjucks": "^2.3.0",
     "gm": "^1.23.1",
-    "graphql.js": "^0.6.6",
+    "graphql.js": "^0.6.7",
     "jsonwebtoken": "^8.5.1",
-    "mysql2": "^1.7.0",
-    "pg": "^7.12.1",
+    "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
-    "sequelize-typescript": "^1.0.0",
-    "shortid": "^2.2.15",
-    "type-graphql": "^1.0.0-rc.1"
+    "sequelize-typescript": "^2.1.0",
+    "shortid": "^2.2.16",
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.40",
-    "@types/node": "^12.0.0",
-    "@types/supertest": "^2.0.0",
-    "autod": "^3.0.1",
+    "@types/bull": "^3.15.2",
+    "@types/mocha": "^8.2.3",
+    "@types/node": "^14.17.3",
+    "@types/supertest": "^2.0.11",
+    "autod": "^3.1.1",
     "autod-egg": "^1.1.0",
-    "egg-bin": "^4.14.0",
-    "egg-ci": "^1.8.0",
-    "egg-mock": "^3.24.1",
-    "tslib": "^1.9.0",
-    "tslint": "^5.20.0",
-    "tslint-config-egg": "^1.0.0",
-    "typescript": "^3.7.0"
+    "egg-bin": "^4.16.4",
+    "egg-ci": "^1.18.0",
+    "egg-mock": "^4.1.0",
+    "eslint": "^7.30.0",
+    "eslint-config-alloy": "^4.1.0",
+    "eslint-config-egg": "^9.0.0",
+    "eslint-plugin-jsdoc": "^35.4.3",
+    "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.0",
+    "sequelize-cli": "^6.2.0",
+    "tslib": "^2.3.0",
+    "typescript": "^4.1.0"
   },
   "engines": {
-    "node": ">=8.9.0"
+    "node": ">=14.17.3"
   },
   "ci": {
     "version": "8"
@@ -69,6 +75,6 @@
   "eslintIgnore": [
     "coverage"
   ],
-  "author": "qicho",
+  "author": "yshidm",
   "license": "MIT"
 }
