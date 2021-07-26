@@ -1,5 +1,6 @@
 import { Service } from 'egg'
 import ExportLog from '../model/Log'
+import { Transaction } from 'sequelize'
 
 export default class LogSvc extends Service {
   model: ReturnType<typeof ExportLog>;
@@ -26,7 +27,7 @@ export default class LogSvc extends Service {
    * @param transaction 事务
    * @return {Promise<any>} 日志
    */
-  public async addLog(obj, transaction?) {
+  public async addLog(obj, transaction?: Transaction) {
     let options = {}
     if (transaction) {
       options = { transaction }
@@ -47,12 +48,15 @@ export default class LogSvc extends Service {
    * @param obj 日志
    * @return {Promise<any>} 日志
    */
-  public async updateLog(obj) {
-    const model = this.ctx.model.Log
+  public async updateLog(obj, transaction?: Transaction) {
+    const model = this.app.model.Log
+    console.log('model.update :>>', model.update)
+    // 输出 model.update 方法
     await model.update(obj, {
       where: {
         id: obj.id,
       },
+      transaction,
     })
     return this.byPk(obj.id)
   }
@@ -90,11 +94,12 @@ export default class LogSvc extends Service {
    * @param where 条件
    * @return {Promise<void>}
    */
-  public async deleteLog(where) {
+  public async deleteLog(where, transaction?: Transaction) {
     where = where?.where ?? where
     const model = this.ctx.model.Log
     return model.destroy({
       where,
+      transaction,
     })
   }
 }

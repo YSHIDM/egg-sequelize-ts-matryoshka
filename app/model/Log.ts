@@ -2,8 +2,6 @@ import { Column, DataType, Table } from 'sequelize-typescript'
 import { Message } from './Message'
 const { STRING, INTEGER } = DataType
 
-// const moment = require('moment');
-
 @Table({
   modelName: 'log',
   tableName: 'log',

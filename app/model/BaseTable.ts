@@ -10,7 +10,7 @@ interface BaseTableAttributes {
   updatedAt: Date
 }
 
-interface BaseTableCreationAttributes extends Optional<BaseTableAttributes, 'id'> { }
+type BaseTableCreationAttributes = Optional<BaseTableAttributes, 'id'>
 // abstract
 @Table({
   modelName: 'base_table',
@@ -55,5 +55,5 @@ class BaseTable extends Model<BaseTableAttributes, BaseTableCreationAttributes> 
 const BaseTableModel = () => BaseTable
 export {
   BaseTable,
-  BaseTableModel
+  BaseTableModel,
 }

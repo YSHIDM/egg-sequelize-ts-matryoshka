@@ -29,8 +29,8 @@ $ npm start
 
 ### Requirement
 
-- Node.js 12.x
-- Typescript 3.7+
+- Node.js 14.x
+- Typescript 4.1+
 
 ## 相关教程
 

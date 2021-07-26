@@ -1,5 +1,6 @@
 import { Service } from 'egg'
 import { BaseTableModel } from '../model/BaseTable'
+import { Transaction } from 'sequelize'
 // 并不需要
 export default class LogSvc extends Service {
   model: ReturnType<typeof BaseTableModel>;
@@ -11,13 +12,14 @@ export default class LogSvc extends Service {
   /**
    * 批量新增
    * @param objArray 数据列表
+   * @param transaction 事务
    */
-  public async batchAdd(objArray) {
+  public async batchAdd(objArray, transaction?: Transaction) {
     objArray = objArray.map(obj => {
       obj.id = this.app['genId']('LOG')
       return obj
     })
-    return await this.model.bulkCreate(objArray)
+    return await this.model.bulkCreate(objArray, { transaction })
       .then(data => data.map(d => d.toJSON()))
   }
   /**

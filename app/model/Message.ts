@@ -23,5 +23,5 @@ class Message extends BaseTable {
 const MessageModel = () => Message
 export {
   Message,
-  MessageModel
+  MessageModel,
 }
