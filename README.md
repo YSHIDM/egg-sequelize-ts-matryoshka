@@ -1,24 +1,27 @@
 # hackernews-async-ts
 
+model 多代继承
+
 [Hacker News](https://news.ycombinator.com/) showcase using typescript && egg
 
 ## QuickStart
 
 ### Development
 
-```bash
-$ npm i
-$ npm run dev
-$ open http://localhost:7002/
+```sh
+npm i
+npm run dev
+open http://localhost:7002/
 ```
 
-Don't tsc compile at development mode, if you had run `tsc` then you need to `npm run clean` before `npm run dev`.
+Don't tsc compile at development mode, if you had run `tsc`
+then you need to `npm run clean` before `npm run dev`.
 
 ### Deploy
 
 ```bash
-$ npm run tsc
-$ npm start
+npm run tsc
+npm start
 ```
 
 ### Npm Scripts
