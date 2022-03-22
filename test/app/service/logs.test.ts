@@ -25,14 +25,14 @@ describe('get()', () => {
   })
   it('test ids', async () => {
     // 创建 ctx
-    const ctx = app.mockContext();
+    const ctx = app.mockContext()
     // 通过 ctx 访问到 service.user
-    const logs = await ctx.service.logsSvc.find({
-      ids: ['IMGhek0eLOq', 'IMG8VU-zgfr']
+    const logs = await ctx.service.logsSvc.getLogs({
+      ids: ['IMGhek0eLOq', 'IMG8VU-zgfr'],
     })
     console.log('update', logs)
     // assert(logs);
-  });
+  })
   // it('get', async () => {
   //     // 创建 ctx
   //     const ctx = app.mockContext();
